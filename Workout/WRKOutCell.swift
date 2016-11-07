@@ -17,23 +17,28 @@ class WRKOutCell: UITableViewCell {
     @IBOutlet weak var fieldThreeTxt: UILabel!
     
     
+    @IBOutlet weak var view: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func updateUI(wrk: WRKOut) {
         
-        //imageView?.image = wrk.imageURL
+        //imgView.image = ""
         titleTxt.text = wrk.title
-        //fieldOneTxt.text = wrk.description
+        fieldOneTxt.text = "Muscle: \(wrk.muscle)"
+        fieldTwoTxt.text = "Type: \(wrk.type)"
+        fieldThreeTxt.text = "Equipment: \(wrk.equip)"
+        view.backgroundColor = wrk.color
+
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
     }
 }
