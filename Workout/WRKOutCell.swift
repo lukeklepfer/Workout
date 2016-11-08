@@ -15,8 +15,6 @@ class WRKOutCell: UITableViewCell {
     @IBOutlet weak var fieldOneTxt: UILabel!
     @IBOutlet weak var fieldTwoTxt: UILabel!
     @IBOutlet weak var fieldThreeTxt: UILabel!
-    
-    
     @IBOutlet weak var view: UIView!
     
     

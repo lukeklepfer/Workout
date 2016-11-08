@@ -8,22 +8,22 @@
 
 import UIKit
 
-class WRKMainDictiVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WRKMainDictVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
     var wrkOutArray = [WRKOut]()
+    var passedType: WRKType!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        testData()
-        
         tableView.delegate = self
         tableView.dataSource = self
-    
         
+        testData()
         
     }
     
@@ -51,6 +51,8 @@ class WRKMainDictiVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         wrkOutArray.append(w10)
     }
 
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WRKOutCell", for: indexPath) as? WRKOutCell{

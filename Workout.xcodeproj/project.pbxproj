@@ -11,7 +11,7 @@
 		AD3779BE1DD179C60054C151 /* WRKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3779BD1DD179C60054C151 /* WRKView.swift */; };
 		AD3779C01DD17B5F0054C151 /* WRKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */; };
 		AD387A921DD0F54900458689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD387A911DD0F54900458689 /* AppDelegate.swift */; };
-		AD387A941DD0F54900458689 /* WRKMainDictiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD387A931DD0F54900458689 /* WRKMainDictiVC.swift */; };
+		AD387A941DD0F54900458689 /* WRKMainDictVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD387A931DD0F54900458689 /* WRKMainDictVC.swift */; };
 		AD387A971DD0F54900458689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD387A951DD0F54900458689 /* Main.storyboard */; };
 		AD387A9A1DD0F54900458689 /* Workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD387A981DD0F54900458689 /* Workout.xcdatamodeld */; };
 		AD387A9C1DD0F54900458689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD387A9B1DD0F54900458689 /* Assets.xcassets */; };
@@ -19,6 +19,9 @@
 		AD387AA71DD10B9700458689 /* WRKOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD387AA61DD10B9700458689 /* WRKOutCell.swift */; };
 		AD387AA91DD10CCE00458689 /* WRKOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD387AA81DD10CCE00458689 /* WRKOut.swift */; };
 		AD387AAB1DD1165500458689 /* WRKDictDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD387AAA1DD1165500458689 /* WRKDictDetailsVC.swift */; };
+		AD542D491DD25C70005073BD /* WRKTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D481DD25C70005073BD /* WRKTypeVC.swift */; };
+		AD542D4B1DD25E88005073BD /* WRKTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */; };
+		AD542D4D1DD26004005073BD /* WRKType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D4C1DD26004005073BD /* WRKType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,7 @@
 		AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKImageView.swift; sourceTree = "<group>"; };
 		AD387A8E1DD0F54900458689 /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD387A911DD0F54900458689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD387A931DD0F54900458689 /* WRKMainDictiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRKMainDictiVC.swift; sourceTree = "<group>"; };
+		AD387A931DD0F54900458689 /* WRKMainDictVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRKMainDictVC.swift; sourceTree = "<group>"; };
 		AD387A961DD0F54900458689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD387A991DD0F54900458689 /* Workout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Workout.xcdatamodel; sourceTree = "<group>"; };
 		AD387A9B1DD0F54900458689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		AD387AA61DD10B9700458689 /* WRKOutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKOutCell.swift; sourceTree = "<group>"; };
 		AD387AA81DD10CCE00458689 /* WRKOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKOut.swift; sourceTree = "<group>"; };
 		AD387AAA1DD1165500458689 /* WRKDictDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKDictDetailsVC.swift; sourceTree = "<group>"; };
+		AD542D481DD25C70005073BD /* WRKTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKTypeVC.swift; sourceTree = "<group>"; };
+		AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKTypeCell.swift; sourceTree = "<group>"; };
+		AD542D4C1DD26004005073BD /* WRKType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				AD387AA81DD10CCE00458689 /* WRKOut.swift */,
+				AD542D4C1DD26004005073BD /* WRKType.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -61,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				AD387AA61DD10B9700458689 /* WRKOutCell.swift */,
+				AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */,
 				AD3779BD1DD179C60054C151 /* WRKView.swift */,
 				AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */,
 			);
@@ -70,18 +78,19 @@
 		AD2398081DD121C500786CD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AD387A931DD0F54900458689 /* WRKMainDictiVC.swift */,
+				AD542D481DD25C70005073BD /* WRKTypeVC.swift */,
+				AD387A931DD0F54900458689 /* WRKMainDictVC.swift */,
 				AD387AAA1DD1165500458689 /* WRKDictDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		AD2398091DD121CE00786CD8 /* Constants */ = {
+		AD2398091DD121CE00786CD8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				AD2398041DD11EC600786CD8 /* Constants.swift */,
 			);
-			name = Constants;
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		AD387A851DD0F54800458689 = {
@@ -104,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AD387A911DD0F54900458689 /* AppDelegate.swift */,
-				AD2398091DD121CE00786CD8 /* Constants */,
+				AD2398091DD121CE00786CD8 /* Utility */,
 				AD2398081DD121C500786CD8 /* Controller */,
 				AD2398071DD121C000786CD8 /* View */,
 				AD2398061DD121B900786CD8 /* Model */,
@@ -193,12 +202,15 @@
 				AD387AAB1DD1165500458689 /* WRKDictDetailsVC.swift in Sources */,
 				AD387A9A1DD0F54900458689 /* Workout.xcdatamodeld in Sources */,
 				AD3779C01DD17B5F0054C151 /* WRKImageView.swift in Sources */,
-				AD387A941DD0F54900458689 /* WRKMainDictiVC.swift in Sources */,
+				AD387A941DD0F54900458689 /* WRKMainDictVC.swift in Sources */,
 				AD387A921DD0F54900458689 /* AppDelegate.swift in Sources */,
 				AD2398051DD11EC600786CD8 /* Constants.swift in Sources */,
 				AD387AA91DD10CCE00458689 /* WRKOut.swift in Sources */,
 				AD387AA71DD10B9700458689 /* WRKOutCell.swift in Sources */,
 				AD3779BE1DD179C60054C151 /* WRKView.swift in Sources */,
+				AD542D4B1DD25E88005073BD /* WRKTypeCell.swift in Sources */,
+				AD542D4D1DD26004005073BD /* WRKType.swift in Sources */,
+				AD542D491DD25C70005073BD /* WRKTypeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
