@@ -27,4 +27,4 @@ let WRK_COLOR_BROWN =    UIColor(red:0.51, green:0.40, blue:0.39, alpha:1.0) //"
 
 
 //Corner Radius
-let WRK_RADIUS = 10
+let WRK_RADIUS = CGFloat(10)

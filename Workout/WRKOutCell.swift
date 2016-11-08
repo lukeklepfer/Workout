@@ -25,6 +25,13 @@ class WRKOutCell: UITableViewCell {
         // Initialization code
     }
     
+    required init?(coder aDecoder: NSCoder){
+        super.init(coder: aDecoder)
+        
+        layer.cornerRadius = WRK_RADIUS
+        
+    }
+    
     func updateUI(wrk: WRKOut) {
         
         //imgView.image = ""
