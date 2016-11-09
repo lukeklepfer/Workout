@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD160DF51DD282FC007E1788 /* excersize.json in Resources */ = {isa = PBXBuildFile; fileRef = AD160DF41DD282FC007E1788 /* excersize.json */; };
 		AD2398051DD11EC600786CD8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2398041DD11EC600786CD8 /* Constants.swift */; };
 		AD3779BE1DD179C60054C151 /* WRKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3779BD1DD179C60054C151 /* WRKView.swift */; };
 		AD3779C01DD17B5F0054C151 /* WRKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD160DF41DD282FC007E1788 /* excersize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = excersize.json; sourceTree = "<group>"; };
 		AD2398041DD11EC600786CD8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD3779BD1DD179C60054C151 /* WRKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKView.swift; sourceTree = "<group>"; };
 		AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKImageView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		AD387A851DD0F54800458689 = {
 			isa = PBXGroup;
 			children = (
+				AD160DF41DD282FC007E1788 /* excersize.json */,
 				AD387A901DD0F54900458689 /* Workout */,
 				AD387A8F1DD0F54900458689 /* Products */,
 			);
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD160DF51DD282FC007E1788 /* excersize.json in Resources */,
 				AD387A9F1DD0F54900458689 /* LaunchScreen.storyboard in Resources */,
 				AD387A9C1DD0F54900458689 /* Assets.xcassets in Resources */,
 				AD387A971DD0F54900458689 /* Main.storyboard in Resources */,

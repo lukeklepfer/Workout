@@ -1,0 +1,29 @@
+{
+    "Bicep Curls": {
+        "Equipment": "Dumbbells",
+        "Muscle": " Biceps",
+        "Type": " Strength",
+        "guide": [
+                  "Adjust the pulleys to the appropriate height and adjust the weight. The pulleys should be above your head.",
+                  "Grab the left pulley with your right hand and the right pulley with your left hand, crossing them in front of you. This will be your starting position.",
+                  "Initiate the movement by moving your arms back and outward, keeping your arms straight as you execute the movement.",
+                  "Pause at the end of the motion before returning the handles to the start position."
+                  ],
+        "link": "http://www.bodybuilding.com/exercises/detail/view/name/cable-rear-delt-fly",
+        "pic": "http://www.bodybuilding.com/exercises/exerciseImages/sequences/867/Male/l/867_1.jpg",
+    }
+    "Cable Rear Delt Fly": {
+        "Equipment": "Cable",
+        "Muscle": "Deltoids",
+        "Type": "Tone",
+        "guide": [
+                  "Adjust the pulleys to the appropriate height and adjust the weight. The pulleys should be above your head.",
+                  "Grab the left pulley with your right hand and the right pulley with your left hand, crossing them in front of you. This will be your starting position.",
+                  "Initiate the movement by moving your arms back and outward, keeping your arms straight as you execute the movement.",
+                  "Pause at the end of the motion before returning the handles to the start position."
+                  ],
+        "link": "http://www.bodybuilding.com/exercises/detail/view/name/cable-rear-delt-fly",
+        "pic": "http://www.bodybuilding.com/exercises/exerciseImages/sequences/867/Male/l/867_1.jpg",
+    }
+    
+}

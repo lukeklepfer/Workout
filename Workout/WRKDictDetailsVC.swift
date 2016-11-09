@@ -29,6 +29,10 @@ class WRKDictDetailsVC: UIViewController {
     @IBOutlet weak var compTitle: UILabel!
     @IBOutlet weak var compView: UIView!
     
+    
+    @IBOutlet weak var relatedBtn: UIButton!
+    @IBOutlet weak var compBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,8 +44,9 @@ class WRKDictDetailsVC: UIViewController {
         //image.image = wrk.imageURL
         titleTxt.text = wrk.title
         field1.text = "Muscle: \(wrk.muscle)"
-        field2.text = "Type: \(wrk.type)"
+        field2.text = "Type: \(wrk.type.title)"
         field3.text = "Equipment: \(wrk.equip)"
+        webView.loadHTMLString(wrk.videoUrl, baseURL: nil)
         webView.backgroundColor = wrk.color
         desc.text = wrk.description
         tech.text = wrk.tech
@@ -53,6 +58,40 @@ class WRKDictDetailsVC: UIViewController {
         //compImg.image = wrk
         compView.backgroundColor = wrk.compColor
         compTitle.text = wrk.compTitle
+        
+    }
+
+    
+    @IBAction func relatedBtnPressed(_ sender: AnyObject) {
+        
+        wrk = WRKOut(imageURL: "image", title: "Squats", videoUrl: "<iframe width=\"368\" height=\"178\" src=\"https://www.youtube.com/embed/5Jv5Qxs7ovQ\" frameborder=\"0\" allowfullscreen></iframe>", color: WRK_COLOR_RED)
+        setUpUI()
+        
+    }
+    
+    @IBAction func compBtnPressed(_ sender: AnyObject) {
+        
+        wrk = WRKOut(imageURL: "image", title: "Bench Press", videoUrl: "<iframe width=\"368\" height=\"178\" src=\"https://www.youtube.com/embed/5Jv5Qxs7ovQ\" frameborder=\"0\" allowfullscreen></iframe>", color: WRK_COLOR_GREEN_D)
+        setUpUI()
+        
+    }
+    
+    func loadPic(){
+    
+        let url = URL(string: wrk.relatedImg)!
+        
+        DispatchQueue.global().async {
+            
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    self.relatedImg.image = UIImage(data: data)
+                    
+                }
+            } catch {
+                //handle error
+            }
+        }
         
     }
 

@@ -18,7 +18,7 @@ class WRKOut {
     private var _WRKTechnique: String!
     private var _WRKColor: UIColor!
     private var _WRKMuscle: String!
-    private var _WRKType: String!
+    private var _WRKType: WRKType!
     private var _WRKEquipment: String!
     private var _WRKRelatedTitle: String!
     private var _WRKRelatedImg: String!
@@ -39,7 +39,7 @@ class WRKOut {
         _WRKTechnique = "Technique of Excersize"
         _WRKColor = color
         _WRKMuscle = "Back"
-        _WRKType = "Body Weight"
+        _WRKType = WRKType(title: "Back", color: color)
         _WRKEquipment = "Dumbbell"
         
         _WRKRelatedTitle = "Squat"
@@ -75,7 +75,7 @@ class WRKOut {
     var muscle: String{
         return _WRKMuscle
     }
-    var type: String{
+    var type: WRKType{
         return _WRKType
     }
     var equip: String{

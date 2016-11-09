@@ -35,9 +35,10 @@ class WRKOutCell: UITableViewCell {
         //imgView.image = ""
         titleTxt.text = wrk.title
         fieldOneTxt.text = "Muscle: \(wrk.muscle)"
-        fieldTwoTxt.text = "Type: \(wrk.type)"
+        fieldTwoTxt.text = "Type: \(wrk.type.title)"
         fieldThreeTxt.text = "Equipment: \(wrk.equip)"
         view.backgroundColor = wrk.color
+        getJson()
 
     }
     
@@ -45,5 +46,27 @@ class WRKOutCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
+    }
+    
+    func getJson(){
+        
+        if let path = Bundle.main.path(forResource: "excersize", ofType: "json") {
+            do {
+                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+                do {
+                    
+                    let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+
+                    if let excersize : [NSDictionary] = jsonResult["Cable Rear Delt Fly"] as? [NSDictionary] {
+                            //print(1)
+                        for current: NSDictionary in excersize {
+                            for (name,value) in current {
+                                print("\(name) , \(value)")
+                            }
+                        }
+                    }
+                } catch {}
+            } catch {}
+        }
     }
 }

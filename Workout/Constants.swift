@@ -26,7 +26,7 @@ let WRK_COLOR_GREEN_D =  UIColor(red:0.22, green:0.56, blue:0.37, alpha:1.0) //"
 let WRK_COLOR_BROWN =    UIColor(red:0.51, green:0.40, blue:0.39, alpha:1.0) //"683214"
 
 
-//Corner Radius
+//Drawable
 let WRK_RADIUS = CGFloat(10)
 
 let SHADOW_COLOR: CGFloat = 157.0 / 255.0 
