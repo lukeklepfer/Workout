@@ -27,6 +27,7 @@ class WRKOut {
     private var _WRKComplimentaryImg: String!
     private var _WRKComplimentaryColor: UIColor!
     
+    private var _WRKRelated = [WRKOut]()
     
     
     
@@ -35,12 +36,13 @@ class WRKOut {
         _WRKImageURL = imageURL
         _WRKTitle = title
         _WRKVideoUrl = videoUrl
-        _WRKDescription = "Description of Excersize"
-        _WRKTechnique = "Technique of Excersize"
         _WRKColor = color
         _WRKMuscle = "Back"
         _WRKType = WRKType(title: "Back", color: color)
         _WRKEquipment = "Dumbbell"
+        _WRKDescription = "Description: Isolate your \(_WRKMuscle!) and lift, then raise the \(_WRKEquipment!)."
+        _WRKTechnique = "Technique: This is the technique for \(_WRKTitle!), you use your \(_WRKMuscle!) and a \(_WRKEquipment!)."
+        
         
         _WRKRelatedTitle = "Squat"
         _WRKRelatedImg = ""

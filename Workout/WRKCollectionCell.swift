@@ -15,6 +15,7 @@ class WRKCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var thumbImg: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var view: WRKView!
     
     
     required init?(coder aDecoder: NSCoder){
@@ -29,6 +30,7 @@ class WRKCollectionCell: UICollectionViewCell {
         
         nameLbl.text = self.wrk.title
         //thumbImg.image = self.wrk.imageURL
+        view.backgroundColor = wrk.color
         
     }
 }
