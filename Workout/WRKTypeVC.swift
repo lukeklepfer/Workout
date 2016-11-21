@@ -43,10 +43,7 @@ class WRKTypeVC: UITableViewController {
         wrkTypeArray.append(w10)
     }
 
-    
-    
-    
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WRKTypeCell", for: indexPath) as? WRKTypeCell{

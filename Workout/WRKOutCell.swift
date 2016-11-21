@@ -38,7 +38,7 @@ class WRKOutCell: UITableViewCell {
         fieldTwoTxt.text = "Type: \(wrk.type.title)"
         fieldThreeTxt.text = "Equipment: \(wrk.equip)"
         view.backgroundColor = wrk.color
-        getJson()
+        //getJson()
 
     }
     

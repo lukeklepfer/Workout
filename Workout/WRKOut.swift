@@ -20,14 +20,13 @@ class WRKOut {
     private var _WRKMuscle: String!
     private var _WRKType: WRKType!
     private var _WRKEquipment: String!
+    
     private var _WRKRelatedTitle: String!
     private var _WRKRelatedImg: String!
     private var _WRKRelatedColor: UIColor!
     private var _WRKComplimentaryTitle: String!
     private var _WRKComplimentaryImg: String!
     private var _WRKComplimentaryColor: UIColor!
-    
-    private var _WRKRelated = [WRKOut]()
     
     
     
@@ -43,7 +42,6 @@ class WRKOut {
         _WRKDescription = "Description: Isolate your \(_WRKMuscle!) and lift, then raise the \(_WRKEquipment!)."
         _WRKTechnique = "Technique: This is the technique for \(_WRKTitle!), you use your \(_WRKMuscle!) and a \(_WRKEquipment!)."
         
-        
         _WRKRelatedTitle = "Squat"
         _WRKRelatedImg = ""
         _WRKRelatedColor = WRK_COLOR_RED
@@ -52,9 +50,23 @@ class WRKOut {
         _WRKComplimentaryImg = ""
         _WRKComplimentaryColor = WRK_COLOR_GREEN_D
         
-        
-        
     }
+    
+//    func loadPic(url: URL){
+//    
+//        DispatchQueue.global().async {
+//            
+//            do {
+//                let data = try Data(contentsOf: url)
+//                DispatchQueue.global().sync {
+//                    //.image = UIImage(data: data)
+//                    
+//                }
+//            } catch {
+//                //handle error
+//            }
+//        }
+//    }
     
     var imageURL: String {
         return _WRKImageURL

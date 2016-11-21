@@ -78,7 +78,7 @@
         <scene sceneID="cxI-Xi-w0k">
             <objects>
                 <navigationController id="w9e-pl-mXc" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="a8X-QY-tjx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a8X-QY-tjx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -117,7 +117,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YfH-Kc-9fB" customClass="WRKView" customModule="Workout" customModuleProvider="target">
                                                     <rect key="frame" x="4" y="8" width="337" height="124"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mr President" translatesAutoresizingMaskIntoConstraints="NO" id="Cb9-zI-5pj" customClass="WRKImageView" customModule="Workout" customModuleProvider="target">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Cb9-zI-5pj" customClass="WRKImageView" customModule="Workout" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="107.5" height="108"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -235,21 +235,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-WJ-K2l">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="573"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="l8s-ph-wps">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8s-ph-wps">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="128"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mr President" translatesAutoresizingMaskIntoConstraints="NO" id="ne0-Ch-FKU" customClass="WRKImageView" customModule="Workout" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="128"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb" translatesAutoresizingMaskIntoConstraints="NO" id="ne0-Ch-FKU" customClass="WRKImageView" customModule="Workout" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="125" id="RPc-vk-ZmW"/>
+                                                            <constraint firstAttribute="width" constant="128" id="RPc-vk-ZmW"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ez3-OW-Y2H">
-                                                        <rect key="frame" x="129" y="0.0" width="216" height="128"/>
+                                                        <rect key="frame" x="136" y="0.0" width="209" height="128"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull-Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhH-al-fku">
-                                                                <rect key="frame" x="0.0" y="0.0" width="216" height="32"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="209" height="32"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="32" id="6eD-OL-VAy"/>
                                                                 </constraints>
@@ -332,7 +332,7 @@
                                                                     <rect key="frame" x="16" y="4" width="149" height="127"/>
                                                                     <color key="backgroundColor" red="0.45098039220000002" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </view>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mr President" translatesAutoresizingMaskIntoConstraints="NO" id="APD-ez-rbO">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb" translatesAutoresizingMaskIntoConstraints="NO" id="APD-ez-rbO">
                                                                     <rect key="frame" x="17" y="8" width="148" height="94"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amS-Ky-qB0">
@@ -416,6 +416,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mr President" width="432" height="610"/>
+        <image name="thumb" width="250" height="250"/>
     </resources>
 </document>

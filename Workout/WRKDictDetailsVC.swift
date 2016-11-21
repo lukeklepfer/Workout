@@ -27,16 +27,15 @@ class WRKDictDetailsVC: UIViewController, UICollectionViewDelegate, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpUI()
-        
         collection.dataSource = self
         collection.delegate = self
         
         testData()
+        setUpUI(wrk: wrk)
 
     }
     
-    func setUpUI(){
+    func setUpUI(wrk: WRKOut){
         //image.image = wrk.imageURL
         titleTxt.text = wrk.title
         field1.text = "Muscle: \(wrk.muscle)"
@@ -90,14 +89,27 @@ class WRKDictDetailsVC: UIViewController, UICollectionViewDelegate, UICollection
             return UICollectionViewCell()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        setUpUI(wrk: wrkOutArray[indexPath.item])
+        
+        let url = "<iframe width=\"368\" height=\"178\" src=\"https://www.youtube.com/embed/5Jv5Qxs7ovQ\" frameborder=\"0\" allowfullscreen></iframe>"
+        wrkOutArray.removeAll()
+        let w1 = WRKOut(imageURL: "image", title: "1", videoUrl: url, color: WRK_COLOR_RED)
+        let w2 = WRKOut(imageURL: "image", title: "2", videoUrl: url, color: WRK_COLOR_PURPLE_D)
+        wrkOutArray.append(w1)
+        wrkOutArray.append(w2)
+        
+        collection.reloadData()
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return wrkOutArray.count
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        print(indexPath)
-    }
+
     private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -106,22 +118,4 @@ class WRKDictDetailsVC: UIViewController, UICollectionViewDelegate, UICollection
         return CGSize(width: 105, height: 105)
     }
     
-//    func loadPic(){
-//    
-//        let url = URL(string: wrk.relatedImg)!
-//        
-//        DispatchQueue.global().async {
-//            
-//            do {
-//                let data = try Data(contentsOf: url)
-//                DispatchQueue.global().sync {
-//                    self.relatedImg.image = UIImage(data: data)
-//                    
-//                }
-//            } catch {
-//                //handle error
-//            }
-//        }
-//        
-//    }
 }
