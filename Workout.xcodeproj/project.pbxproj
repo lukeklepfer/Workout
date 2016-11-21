@@ -23,6 +23,7 @@
 		AD542D491DD25C70005073BD /* WRKTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D481DD25C70005073BD /* WRKTypeVC.swift */; };
 		AD542D4B1DD25E88005073BD /* WRKTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */; };
 		AD542D4D1DD26004005073BD /* WRKType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D4C1DD26004005073BD /* WRKType.swift */; };
+		ADE2D73F1DE2B0DA00930564 /* WRKCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2D73E1DE2B0DA00930564 /* WRKCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		AD542D481DD25C70005073BD /* WRKTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKTypeVC.swift; sourceTree = "<group>"; };
 		AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKTypeCell.swift; sourceTree = "<group>"; };
 		AD542D4C1DD26004005073BD /* WRKType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKType.swift; sourceTree = "<group>"; };
+		ADE2D73E1DE2B0DA00930564 /* WRKCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */,
 				AD3779BD1DD179C60054C151 /* WRKView.swift */,
 				AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */,
+				ADE2D73E1DE2B0DA00930564 /* WRKCollectionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -156,12 +159,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Luke;
 				TargetAttributes = {
 					AD387A8D1DD0F54800458689 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = R35YZ2DQK9;
+						DevelopmentTeam = HX5Z8E9QEF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -207,6 +210,7 @@
 				AD387A9A1DD0F54900458689 /* Workout.xcdatamodeld in Sources */,
 				AD3779C01DD17B5F0054C151 /* WRKImageView.swift in Sources */,
 				AD387A941DD0F54900458689 /* WRKMainDictVC.swift in Sources */,
+				ADE2D73F1DE2B0DA00930564 /* WRKCollectionCell.swift in Sources */,
 				AD387A921DD0F54900458689 /* AppDelegate.swift in Sources */,
 				AD2398051DD11EC600786CD8 /* Constants.swift in Sources */,
 				AD387AA91DD10CCE00458689 /* WRKOut.swift in Sources */,
@@ -258,6 +262,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -308,6 +313,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -337,10 +343,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R35YZ2DQK9;
+				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = Workout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.Workout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.app.Workout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -350,10 +357,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R35YZ2DQK9;
+				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = Workout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.Workout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.app.Workout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

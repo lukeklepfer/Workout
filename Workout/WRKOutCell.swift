@@ -54,11 +54,11 @@ class WRKOutCell: UITableViewCell {
             do {
                 let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
                 do {
-                    
+                    print(1)
                     let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-
-                    if let excersize : [NSDictionary] = jsonResult["Cable Rear Delt Fly"] as? [NSDictionary] {
-                            //print(1)
+                    
+                    if let excersize : [NSDictionary] = jsonResult["Bicep Curls"] as? [NSDictionary] {
+                        
                         for current: NSDictionary in excersize {
                             for (name,value) in current {
                                 print("\(name) , \(value)")
