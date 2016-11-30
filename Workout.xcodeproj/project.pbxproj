@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4592C42513730BDEC03B5E7E /* Pods_Workout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B89C5E4ABE84F6C4AECC2C /* Pods_Workout.framework */; };
-		AD160DF51DD282FC007E1788 /* excersize.json in Resources */ = {isa = PBXBuildFile; fileRef = AD160DF41DD282FC007E1788 /* excersize.json */; };
 		AD2398051DD11EC600786CD8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2398041DD11EC600786CD8 /* Constants.swift */; };
 		AD3779BE1DD179C60054C151 /* WRKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3779BD1DD179C60054C151 /* WRKView.swift */; };
 		AD3779C01DD17B5F0054C151 /* WRKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */; };
@@ -23,7 +22,7 @@
 		AD387AAB1DD1165500458689 /* WRKDictDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD387AAA1DD1165500458689 /* WRKDictDetailsVC.swift */; };
 		AD542D491DD25C70005073BD /* WRKTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D481DD25C70005073BD /* WRKTypeVC.swift */; };
 		AD542D4B1DD25E88005073BD /* WRKTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */; };
-		AD542D4D1DD26004005073BD /* WRKType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D4C1DD26004005073BD /* WRKType.swift */; };
+		AD542D4D1DD26004005073BD /* WRKMuscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD542D4C1DD26004005073BD /* WRKMuscle.swift */; };
 		ADA959E31DEE37D100EE7DAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA959E21DEE37D100EE7DAB /* GoogleService-Info.plist */; };
 		ADA959E61DEE3ADF00EE7DAB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA959E51DEE3ADF00EE7DAB /* DataService.swift */; };
 		ADE2D73F1DE2B0DA00930564 /* WRKCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2D73E1DE2B0DA00930564 /* WRKCollectionCell.swift */; };
@@ -33,7 +32,6 @@
 		29B89C5E4ABE84F6C4AECC2C /* Pods_Workout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3241311F706B0973BE450191 /* Pods-Workout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout/Pods-Workout.debug.xcconfig"; sourceTree = "<group>"; };
 		86B87F8DE2465EF93506311F /* Pods-Workout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout/Pods-Workout.release.xcconfig"; sourceTree = "<group>"; };
-		AD160DF41DD282FC007E1788 /* excersize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = excersize.json; sourceTree = "<group>"; };
 		AD2398041DD11EC600786CD8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD3779BD1DD179C60054C151 /* WRKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKView.swift; sourceTree = "<group>"; };
 		AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKImageView.swift; sourceTree = "<group>"; };
@@ -50,7 +48,7 @@
 		AD387AAA1DD1165500458689 /* WRKDictDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKDictDetailsVC.swift; sourceTree = "<group>"; };
 		AD542D481DD25C70005073BD /* WRKTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKTypeVC.swift; sourceTree = "<group>"; };
 		AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKTypeCell.swift; sourceTree = "<group>"; };
-		AD542D4C1DD26004005073BD /* WRKType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKType.swift; sourceTree = "<group>"; };
+		AD542D4C1DD26004005073BD /* WRKMuscle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKMuscle.swift; sourceTree = "<group>"; };
 		ADA959E21DEE37D100EE7DAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADA959E51DEE3ADF00EE7DAB /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		ADE2D73E1DE2B0DA00930564 /* WRKCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRKCollectionCell.swift; sourceTree = "<group>"; };
@@ -89,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AD387AA81DD10CCE00458689 /* WRKOut.swift */,
-				AD542D4C1DD26004005073BD /* WRKType.swift */,
+				AD542D4C1DD26004005073BD /* WRKMuscle.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -127,7 +125,6 @@
 		AD387A851DD0F54800458689 = {
 			isa = PBXGroup;
 			children = (
-				AD160DF41DD282FC007E1788 /* excersize.json */,
 				AD387A901DD0F54900458689 /* Workout */,
 				AD387A8F1DD0F54900458689 /* Products */,
 				633A9AADA1E8C575A417B833 /* Pods */,
@@ -233,7 +230,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD160DF51DD282FC007E1788 /* excersize.json in Resources */,
 				AD387A9F1DD0F54900458689 /* LaunchScreen.storyboard in Resources */,
 				ADA959E31DEE37D100EE7DAB /* GoogleService-Info.plist in Resources */,
 				AD387A9C1DD0F54900458689 /* Assets.xcassets in Resources */,
@@ -308,7 +304,7 @@
 				AD387AA71DD10B9700458689 /* WRKOutCell.swift in Sources */,
 				AD3779BE1DD179C60054C151 /* WRKView.swift in Sources */,
 				AD542D4B1DD25E88005073BD /* WRKTypeCell.swift in Sources */,
-				AD542D4D1DD26004005073BD /* WRKType.swift in Sources */,
+				AD542D4D1DD26004005073BD /* WRKMuscle.swift in Sources */,
 				AD542D491DD25C70005073BD /* WRKTypeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

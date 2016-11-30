@@ -14,8 +14,8 @@ class WRKMainDictVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     
     var wrkOutArray = [WRKOut]()
-    var passedType: WRKType!
-    
+    var passedType: WRKMuscle!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,13 @@ class WRKMainDictVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.delegate = self
         tableView.dataSource = self
         
+//        let keys = passedType.workouts.keys
+//        for k in keys {
+//            print(k)
+//        }
+        
         DataService.ds.REF_WRK.observe(.value, with: { (snapshot ) in
-         self.wrkOutArray = []
+            self.wrkOutArray = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     //print ("LUKE: \(snap)")

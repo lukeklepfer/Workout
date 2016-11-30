@@ -22,6 +22,7 @@ class DataService {
     //Database
     private var _REF_BASE = DB_BASE
     private var _REF_WRK = DB_BASE.child("workouts")
+    private var _REF_TYP = DB_BASE.child("types")
     
     //Storage
     private var _REF_STOR_POST_PICS = STOR_BASE.child("wrk-pics")
@@ -29,6 +30,9 @@ class DataService {
     
     var REF_WRK: FIRDatabaseReference {
         return _REF_WRK
+    }
+    var REF_TYP: FIRDatabaseReference {
+        return _REF_TYP
     }
     
 }

@@ -27,7 +27,7 @@ class WRKTypeCell: UITableViewCell {
         
     }
     
-    func updateUI(wrkType: WRKType) {
+    func updateUI(wrkType: WRKMuscle) {
         
         label.text = wrkType.title
         view.backgroundColor = wrkType.color

@@ -26,8 +26,9 @@ class WRKOutCell: UITableViewCell {
     func updateUI(wrk: WRKOut) {
         
         titleTxt.text = wrk.title
-        fieldOneTxt.text = "Muscle: \(wrk.description)"
-        fieldTwoTxt.text = "Type: \(wrk.imageURL)"
+        //imgView.image =
+        fieldOneTxt.text = "Description: \(wrk.description)"
+        fieldTwoTxt.text = "Technique: \(wrk.tech)"
         fieldThreeTxt.text = "Equipment: \(wrk.equip)"
         view.backgroundColor = wrk.color
         
