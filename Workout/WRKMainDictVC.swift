@@ -23,11 +23,6 @@ class WRKMainDictVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.delegate = self
         tableView.dataSource = self
         
-//        let keys = passedType.workouts.keys
-//        for k in keys {
-//            print(k)
-//        }
-        
         DataService.ds.REF_WRK.observe(.value, with: { (snapshot ) in
             self.wrkOutArray = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -46,40 +41,29 @@ class WRKMainDictVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WRKOutCell", for: indexPath) as? WRKOutCell{
-            
             let wrkOut = wrkOutArray[indexPath.row]
             cell.updateUI(wrk: wrkOut)
             return cell
         }else{
             return UITableViewCell()
         }
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return wrkOutArray.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let selectedCell = wrkOutArray[indexPath.row]
         performSegue(withIdentifier: "ShowWRKOutDetail", sender: selectedCell)
-        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let destination = segue.destination as? WRKDictDetailsVC {
-            
             if let wrk = sender as? WRKOut {
-                
                 destination.wrk = wrk
-
             }
         }
     }
-
 }
 

@@ -16,7 +16,7 @@ class WRKTypeVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DataService.ds.REF_TYP.observe(.value, with: { (snapshot ) in
+        DataService.ds.REF_MUS.observe(.value, with: { (snapshot ) in
             self.wrkTypeArray = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
