@@ -8,9 +8,10 @@
 
 import UIKit
 
-class WRKDictDetailsVC: UIViewController {
+class WRKDictDetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     var wrk: WRKOut!
+    var wrkOutArray = [WRKOut]()
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleTxt: UILabel!
@@ -20,80 +21,63 @@ class WRKDictDetailsVC: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var tech: UILabel!
+    @IBOutlet weak var collection: UICollectionView!
     
-    @IBOutlet weak var relatedImg: UIImageView!
-    @IBOutlet weak var relatedView: UIView!
-    @IBOutlet weak var relatedTitle: UILabel!
-    
-    @IBOutlet weak var compImg: UIImageView!
-    @IBOutlet weak var compTitle: UILabel!
-    @IBOutlet weak var compView: UIView!
-    
-    
-    @IBOutlet weak var relatedBtn: UIButton!
-    @IBOutlet weak var compBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpUI()
+        collection.dataSource = self
+        collection.delegate = self
+
+        setUpUI(wrk: wrk)
 
     }
     
-    func setUpUI(){
-        //image.image = wrk.imageURL
-        titleTxt.text = wrk.title
-        field1.text = "Muscle: \(wrk.muscle)"
-        field2.text = "Type: \(wrk.type.title)"
-        field3.text = "Equipment: \(wrk.equip)"
+    func setUpUI(wrk: WRKOut){
         webView.loadHTMLString(wrk.videoUrl, baseURL: nil)
         webView.backgroundColor = wrk.color
+        titleTxt.text = wrk.title
+        field1.text = wrk.imageURL
+        field2.text = wrk.videoUrl
+        field3.text = wrk.equip
         desc.text = wrk.description
         tech.text = wrk.tech
-        
-        //relatedImg.image = wrk
-        relatedView.backgroundColor = wrk.relatedColor
-        relatedTitle.text = wrk.relatedTitle
-        
-        //compImg.image = wrk
-        compView.backgroundColor = wrk.compColor
-        compTitle.text = wrk.compTitle
-        
-    }
-
-    
-    @IBAction func relatedBtnPressed(_ sender: AnyObject) {
-        
-        wrk = WRKOut(imageURL: "image", title: "Squats", videoUrl: "<iframe width=\"368\" height=\"178\" src=\"https://www.youtube.com/embed/5Jv5Qxs7ovQ\" frameborder=\"0\" allowfullscreen></iframe>", color: WRK_COLOR_RED)
-        setUpUI()
-        
     }
     
-    @IBAction func compBtnPressed(_ sender: AnyObject) {
-        
-        wrk = WRKOut(imageURL: "image", title: "Bench Press", videoUrl: "<iframe width=\"368\" height=\"178\" src=\"https://www.youtube.com/embed/5Jv5Qxs7ovQ\" frameborder=\"0\" allowfullscreen></iframe>", color: WRK_COLOR_GREEN_D)
-        setUpUI()
-        
-    }
     
-    func loadPic(){
     
-        let url = URL(string: wrk.relatedImg)!
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        DispatchQueue.global().async {
+        if let cell = collection.dequeueReusableCell(withReuseIdentifier: "CollectCompCell", for: indexPath) as? WRKCollectionCell{
             
-            do {
-                let data = try Data(contentsOf: url)
-                DispatchQueue.global().sync {
-                    self.relatedImg.image = UIImage(data: data)
-                    
-                }
-            } catch {
-                //handle error
-            }
+            let wrkCell: WRKOut!
+                wrkCell = wrkOutArray[indexPath.row]
+            cell.configureCell(wrk: wrkCell)
+            return cell
         }
+            
+        else{
+            return UICollectionViewCell()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        setUpUI(wrk: wrkOutArray[indexPath.item])
+        collection.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        return wrkOutArray.count
     }
 
-
+    private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    private func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        return CGSize(width: 105, height: 105)
+    }
+    
 }

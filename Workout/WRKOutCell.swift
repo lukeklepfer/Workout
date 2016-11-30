@@ -23,6 +23,17 @@ class WRKOutCell: UITableViewCell {
         // Initialization code
     }
     
+    func updateUI(wrk: WRKOut) {
+        
+        titleTxt.text = wrk.title
+        //imgView.image =
+        fieldOneTxt.text = "Description: \(wrk.description)"
+        fieldTwoTxt.text = "Technique: \(wrk.tech)"
+        fieldThreeTxt.text = "Equipment: \(wrk.equip)"
+        view.backgroundColor = wrk.color
+        
+    }
+    
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
         
@@ -30,43 +41,4 @@ class WRKOutCell: UITableViewCell {
         
     }
     
-    func updateUI(wrk: WRKOut) {
-        
-        //imgView.image = ""
-        titleTxt.text = wrk.title
-        fieldOneTxt.text = "Muscle: \(wrk.muscle)"
-        fieldTwoTxt.text = "Type: \(wrk.type.title)"
-        fieldThreeTxt.text = "Equipment: \(wrk.equip)"
-        view.backgroundColor = wrk.color
-        getJson()
-
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-    func getJson(){
-        
-        if let path = Bundle.main.path(forResource: "excersize", ofType: "json") {
-            do {
-                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
-                do {
-                    
-                    let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-
-                    if let excersize : [NSDictionary] = jsonResult["Cable Rear Delt Fly"] as? [NSDictionary] {
-                            //print(1)
-                        for current: NSDictionary in excersize {
-                            for (name,value) in current {
-                                print("\(name) , \(value)")
-                            }
-                        }
-                    }
-                } catch {}
-            } catch {}
-        }
-    }
 }

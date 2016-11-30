@@ -7,46 +7,32 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class WRKTypeVC: UITableViewController {
     
-    var wrkTypeArray = [WRKType]()
+    var wrkTypeArray = [WRKMuscle]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testData()
+        DataService.ds.REF_TYP.observe(.value, with: { (snapshot ) in
+            self.wrkTypeArray = []
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshot {
+                    //print ("LUKE: \(snap)")
+                    if let typDict = snap.value as? Dictionary<String, Any> {
+                        let key = snap.key
+                        let typ = WRKMuscle(key: key, data: typDict)
+                        self.wrkTypeArray.append(typ)
+                    }
+                }
+            }
+            self.tableView.reloadData()
+        })
 
     }
-    
-    func testData(){
-        let w1 = WRKType(title: "Abdominals", color: WRK_COLOR_BLUE_L)
-        let w2 = WRKType(title: "Back", color: WRK_COLOR_BLUE_D)
-        let w3 = WRKType(title: "Chest", color: WRK_COLOR_PURPLE_D)
-        let w4 = WRKType(title: "Deltoids", color: WRK_COLOR_PURPLE_L)
-        let w5 = WRKType(title: "Glutes", color: WRK_COLOR_RED)
-        let w6 = WRKType(title: "Hamstring", color: WRK_COLOR_ORANGE)
-        let w7 = WRKType(title: "Quadriceps", color: WRK_COLOR_YELLOW)
-        let w8 = WRKType(title: "Calves", color: WRK_COLOR_GREEN_L)
-        let w9 = WRKType(title: "Triceps", color: WRK_COLOR_GREEN_D)
-        let w10 = WRKType(title: "Biceps", color: WRK_COLOR_BROWN)
-        
-        wrkTypeArray.append(w1)
-        wrkTypeArray.append(w2)
-        wrkTypeArray.append(w3)
-        wrkTypeArray.append(w4)
-        wrkTypeArray.append(w5)
-        wrkTypeArray.append(w6)
-        wrkTypeArray.append(w7)
-        wrkTypeArray.append(w8)
-        wrkTypeArray.append(w9)
-        wrkTypeArray.append(w10)
-    }
 
-    
-    
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WRKTypeCell", for: indexPath) as? WRKTypeCell{
@@ -74,7 +60,7 @@ class WRKTypeVC: UITableViewController {
         
         if let destination = segue.destination as? WRKMainDictVC {
             
-            if let typ = sender as? WRKType {
+            if let typ = sender as? WRKMuscle {
                 
                 destination.passedType = typ
                 

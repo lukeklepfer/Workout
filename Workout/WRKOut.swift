@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class WRKOut {
     
@@ -17,45 +18,48 @@ class WRKOut {
     private var _WRKDescription: String!
     private var _WRKTechnique: String!
     private var _WRKColor: UIColor!
-    private var _WRKMuscle: String!
-    private var _WRKType: WRKType!
+    private var _WRKMuscle: Dictionary<Int, Bool>!
     private var _WRKEquipment: String!
-    private var _WRKRelatedTitle: String!
-    private var _WRKRelatedImg: String!
-    private var _WRKRelatedColor: UIColor!
-    private var _WRKComplimentaryTitle: String!
-    private var _WRKComplimentaryImg: String!
-    private var _WRKComplimentaryColor: UIColor!
+    private var _WRKKey: String!
+    private var _WRKRelated: Dictionary<Int, Bool>!
     
     
-    
-    
-    init(imageURL: String, title: String, videoUrl: String, color: UIColor){
+    init(key: String, data: Dictionary<String, Any>) {
         
-        _WRKImageURL = imageURL
-        _WRKTitle = title
-        _WRKVideoUrl = videoUrl
-        _WRKDescription = "Description of Excersize"
-        _WRKTechnique = "Technique of Excersize"
-        _WRKColor = color
-        _WRKMuscle = "Back"
-        _WRKType = WRKType(title: "Back", color: color)
-        _WRKEquipment = "Dumbbell"
+        _WRKColor = WRK_COLOR_GREEN_D
+        _WRKKey = key
         
-        _WRKRelatedTitle = "Squat"
-        _WRKRelatedImg = ""
-        _WRKRelatedColor = WRK_COLOR_RED
-        
-        _WRKComplimentaryTitle = "Bench Press"
-        _WRKComplimentaryImg = ""
-        _WRKComplimentaryColor = WRK_COLOR_GREEN_D
-        
-        
-        
+        if let title = data["name"]{
+            self._WRKTitle = title as? String
+        }
+        if let imgUrl = data["img"]{
+            self._WRKImageURL = imgUrl as? String
+        }
+        if let desc = data["description"]{
+            self._WRKDescription = desc as? String
+        }
+        if let equip = data["equipment"]{
+            self._WRKEquipment = equip as? String
+        }
+        if let tech = data["technique"]{
+            self._WRKTechnique = tech as? String
+        }
+        if let vid = data["video"]{
+            self._WRKVideoUrl = vid as? String
+        }
+        if let related = data["related"]{
+            self._WRKRelated = related as? Dictionary<Int, Bool>
+        }
+        if let muscle = data["muscle"]{
+            self._WRKMuscle = muscle as? Dictionary<Int, Bool>
+        }
     }
     
     var imageURL: String {
         return _WRKImageURL
+    }
+    var key: String {
+        return _WRKKey
     }
     var title: String {
         return _WRKTitle
@@ -72,32 +76,14 @@ class WRKOut {
     var color: UIColor{
         return _WRKColor
     }
-    var muscle: String{
+    var muscle: Dictionary<Int, Bool>{
         return _WRKMuscle
-    }
-    var type: WRKType{
-        return _WRKType
     }
     var equip: String{
         return _WRKEquipment
     }
-    var relatedTitle: String{
-        return _WRKRelatedTitle
-    }
-    var relatedImg: String{
-        return _WRKRelatedImg
-    }
-    var relatedColor: UIColor{
-        return _WRKRelatedColor
-    }
-    var compTitle: String{
-        return _WRKComplimentaryTitle
-    }
-    var compImg: String{
-        return _WRKComplimentaryImg
-    }
-    var compColor: UIColor{
-        return _WRKComplimentaryColor
+    var related: Dictionary<Int, Bool>{
+        return _WRKRelated
     }
     
 }
