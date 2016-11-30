@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class WRKOut {
     
@@ -21,52 +22,34 @@ class WRKOut {
     private var _WRKType: WRKType!
     private var _WRKEquipment: String!
     
-    private var _WRKRelatedTitle: String!
-    private var _WRKRelatedImg: String!
-    private var _WRKRelatedColor: UIColor!
-    private var _WRKComplimentaryTitle: String!
-    private var _WRKComplimentaryImg: String!
-    private var _WRKComplimentaryColor: UIColor!
     
     
-    
-    init(imageURL: String, title: String, videoUrl: String, color: UIColor){
+    init(key: String, data: Dictionary<String, Any>) {
         
-        _WRKImageURL = imageURL
-        _WRKTitle = title
-        _WRKVideoUrl = videoUrl
-        _WRKColor = color
-        _WRKMuscle = "Back"
-        _WRKType = WRKType(title: "Back", color: color)
-        _WRKEquipment = "Dumbbell"
-        _WRKDescription = "Description: Isolate your \(_WRKMuscle!) and lift, then raise the \(_WRKEquipment!)."
-        _WRKTechnique = "Technique: This is the technique for \(_WRKTitle!), you use your \(_WRKMuscle!) and a \(_WRKEquipment!)."
+        _WRKColor = WRK_COLOR_GREEN_D
         
-        _WRKRelatedTitle = "Squat"
-        _WRKRelatedImg = ""
-        _WRKRelatedColor = WRK_COLOR_RED
-        
-        _WRKComplimentaryTitle = "Bench Press"
-        _WRKComplimentaryImg = ""
-        _WRKComplimentaryColor = WRK_COLOR_GREEN_D
-        
-    }
-    
-//    func loadPic(url: URL){
-//    
-//        DispatchQueue.global().async {
-//            
-//            do {
-//                let data = try Data(contentsOf: url)
-//                DispatchQueue.global().sync {
-//                    //.image = UIImage(data: data)
-//                    
-//                }
-//            } catch {
-//                //handle error
-//            }
+        if let title = data["name"]{
+            self._WRKTitle = title as? String
+        }
+        if let imgUrl = data["img"]{
+            self._WRKImageURL = imgUrl as? String
+        }
+        if let desc = data["description"]{
+            self._WRKDescription = desc as? String
+        }
+        if let equip = data["equipment"]{
+            self._WRKEquipment = equip as? String
+        }
+        if let tech = data["technique"]{
+            self._WRKTechnique = tech as? String
+        }
+        if let vid = data["video"]{
+            self._WRKVideoUrl = vid as? String
+        }
+//        if let related = data["related"]{
+//            self._WRKRelatedTitle = desc as? String
 //        }
-//    }
+    }
     
     var imageURL: String {
         return _WRKImageURL
@@ -94,24 +77,6 @@ class WRKOut {
     }
     var equip: String{
         return _WRKEquipment
-    }
-    var relatedTitle: String{
-        return _WRKRelatedTitle
-    }
-    var relatedImg: String{
-        return _WRKRelatedImg
-    }
-    var relatedColor: UIColor{
-        return _WRKRelatedColor
-    }
-    var compTitle: String{
-        return _WRKComplimentaryTitle
-    }
-    var compImg: String{
-        return _WRKComplimentaryImg
-    }
-    var compColor: UIColor{
-        return _WRKComplimentaryColor
     }
     
 }

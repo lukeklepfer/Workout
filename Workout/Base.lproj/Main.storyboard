@@ -36,7 +36,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.65012943863022676" green="1" blue="0.20415140821314159" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.83729954770000004" green="0.24313725489999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="JPd-mN-FUC" secondAttribute="trailing" constant="8" id="Nt3-mN-lI4"/>
                                                 <constraint firstItem="JPd-mN-FUC" firstAttribute="centerY" secondItem="qRJ-SG-FdZ" secondAttribute="centerY" id="cax-jL-F2U"/>
@@ -122,6 +122,7 @@
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="107.5" id="AGV-m7-Wyo"/>
+                                                                <constraint firstAttribute="height" constant="107.5" id="DKa-KF-cHj"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PJJ-cX-sDC">

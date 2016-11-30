@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 //COLOR SCHEME
 let WRK_COLOR_BACK_1 =   UIColor(red:0.24, green:0.32, blue:0.41, alpha:1.0) //"3c5168"
 let WRK_COLOR_BACK_2 =   UIColor(red:0.18, green:0.24, blue:0.32, alpha:1.0) //"2e3e52"
