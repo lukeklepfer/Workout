@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class WRKOutCell: UITableViewCell {
 
@@ -26,12 +27,29 @@ class WRKOutCell: UITableViewCell {
     func updateUI(wrk: WRKOut) {
         
         titleTxt.text = wrk.title
-        //imgView.image =
+        getImg(url: wrk.imageURL)
         fieldOneTxt.text = "Description: \(wrk.description)"
         fieldTwoTxt.text = "Technique: \(wrk.tech)"
         fieldThreeTxt.text = "Equipment: \(wrk.equip)"
         view.backgroundColor = wrk.color
         
+    }
+    
+    func getImg(url: String){
+        let ref = FIRStorage.storage().reference(forURL: url)
+        ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error) in //Calculating = 2MB
+            if error != nil {
+                print("LUKE: Unable to download image")
+            }else{
+                print("LUKE: Image downloaded")
+                if let imgData = data {
+                    if let img = UIImage(data: imgData) {
+                        self.imgView.image = img
+                        //FeedVC.imgCache.setObject(img, forKey: post.imgUrl as NSString)
+                    }
+                }
+            }
+        })
     }
     
     required init?(coder aDecoder: NSCoder){
