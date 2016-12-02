@@ -27,16 +27,11 @@ class WRKOutCell: UITableViewCell {
     func updateUI(wrk: WRKOut) {
         
         titleTxt.text = wrk.title
-        getImg(url: wrk.imageURL)
         fieldOneTxt.text = "Description: \(wrk.description)"
         fieldTwoTxt.text = "Technique: \(wrk.tech)"
         fieldThreeTxt.text = "Equipment: \(wrk.equip)"
-        view.backgroundColor = wrk.color
         
-    }
-    
-    func getImg(url: String){
-        let ref = FIRStorage.storage().reference(forURL: url)
+        let ref = FIRStorage.storage().reference(forURL: wrk.imageURL)
         ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error) in //Calculating = 2MB
             if error != nil {
                 print("LUKE: Unable to download image")
@@ -45,12 +40,17 @@ class WRKOutCell: UITableViewCell {
                 if let imgData = data {
                     if let img = UIImage(data: imgData) {
                         self.imgView.image = img
+                        wrk.WRKImage = img
                         //FeedVC.imgCache.setObject(img, forKey: post.imgUrl as NSString)
                     }
                 }
             }
         })
+        
+        view.backgroundColor = wrk.color
+        
     }
+
     
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)

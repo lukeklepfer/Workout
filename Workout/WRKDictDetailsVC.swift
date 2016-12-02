@@ -35,6 +35,7 @@ class WRKDictDetailsVC: UIViewController, UICollectionViewDelegate, UICollection
     }
     
     func setUpUI(wrk: WRKOut){
+        image.image = wrk.WRKImage
         webView.loadHTMLString(wrk.videoUrl, baseURL: nil)
         webView.backgroundColor = wrk.color
         titleTxt.text = wrk.title

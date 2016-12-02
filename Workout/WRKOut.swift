@@ -13,6 +13,7 @@ import Firebase
 class WRKOut {
     
     private var _WRKImageURL: String!
+    var WRKImage: UIImage!
     private var _WRKTitle: String!
     private var _WRKVideoUrl: String!
     private var _WRKDescription: String!
@@ -58,6 +59,9 @@ class WRKOut {
     var imageURL: String {
         return _WRKImageURL
     }
+//    var image: UIImage {
+//        return _WRKImage
+//    }
     var key: String {
         return _WRKKey
     }
