@@ -24,7 +24,6 @@ let WRK_COLOR_GREEN_L =  UIColor(red:0.61, green:0.71, blue:0.34, alpha:1.0) //"
 let WRK_COLOR_GREEN_D =  UIColor(red:0.22, green:0.56, blue:0.37, alpha:1.0) //"398e5f"
 let WRK_COLOR_BROWN =    UIColor(red:0.51, green:0.40, blue:0.39, alpha:1.0) //"683214"
 
-
 //Drawable
 let WRK_RADIUS = CGFloat(10)
 

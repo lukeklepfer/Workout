@@ -25,10 +25,8 @@ class WRKOut {
     
     
     init(key: String, data: Dictionary<String, Any>) {
-        
-        _WRKColor = WRK_COLOR_GREEN_D
-        _WRKKey = key
-        
+
+        _WRKColor = WRK_COLOR_YELLOW
         if let title = data["name"]{
             self._WRKTitle = title as? String
         }
@@ -53,8 +51,9 @@ class WRKOut {
         if let muscle = data["muscle"]{
             self._WRKMuscle = muscle as? Dictionary<Int, Bool>
         }
+        
     }
-    
+
     var imageURL: String {
         return _WRKImageURL
     }
