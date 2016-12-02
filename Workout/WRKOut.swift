@@ -27,10 +27,11 @@ class WRKOut {
     init(key: String, data: Dictionary<String, Any>) {
 
         _WRKColor = WRK_COLOR_YELLOW
+        
         if let title = data["name"]{
             self._WRKTitle = title as? String
         }
-        if let imgUrl = data["img"]{
+        if let imgUrl = data["imgUrl"]{
             self._WRKImageURL = imgUrl as? String
         }
         if let desc = data["description"]{
@@ -42,7 +43,7 @@ class WRKOut {
         if let tech = data["technique"]{
             self._WRKTechnique = tech as? String
         }
-        if let vid = data["video"]{
+        if let vid = data["videoUrl"]{
             self._WRKVideoUrl = vid as? String
         }
         if let related = data["related"]{
