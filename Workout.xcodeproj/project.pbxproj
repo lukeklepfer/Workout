@@ -97,9 +97,9 @@
 			children = (
 				AD387AA61DD10B9700458689 /* WRKOutCell.swift */,
 				AD542D4A1DD25E88005073BD /* WRKTypeCell.swift */,
+				ADE2D73E1DE2B0DA00930564 /* WRKCollectionCell.swift */,
 				AD3779BD1DD179C60054C151 /* WRKView.swift */,
 				AD3779BF1DD17B5F0054C151 /* WRKImageView.swift */,
-				ADE2D73E1DE2B0DA00930564 /* WRKCollectionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

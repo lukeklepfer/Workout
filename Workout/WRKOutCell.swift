@@ -30,6 +30,7 @@ class WRKOutCell: UITableViewCell {
         fieldOneTxt.text = "Description: \(wrk.description)"
         fieldTwoTxt.text = "Technique: \(wrk.tech)"
         fieldThreeTxt.text = "Equipment: \(wrk.equip)"
+        view.backgroundColor = wrk.color
         
         let ref = FIRStorage.storage().reference(forURL: wrk.imageURL)
         ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error) in //Calculating = 2MB
@@ -46,9 +47,6 @@ class WRKOutCell: UITableViewCell {
                 }
             }
         })
-        
-        view.backgroundColor = wrk.color
-        
     }
 
     

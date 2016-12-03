@@ -19,10 +19,10 @@ class WRKOut {
     private var _WRKDescription: String!
     private var _WRKTechnique: String!
     private var _WRKColor: UIColor!
-    private var _WRKMuscle: Dictionary<Int, Bool>!
+    private var _WRKMuscle: Dictionary<String, String>!
     private var _WRKEquipment: String!
     private var _WRKKey: String!
-    private var _WRKRelated: Dictionary<Int, Bool>!
+    private var _WRKRelated: Dictionary<String, Bool>!
     
     
     init(key: String, data: Dictionary<String, Any>) {
@@ -48,10 +48,65 @@ class WRKOut {
             self._WRKVideoUrl = vid as? String
         }
         if let related = data["related"]{
-            self._WRKRelated = related as? Dictionary<Int, Bool>
+            self._WRKRelated = related as? Dictionary<String, Bool>
         }
         if let muscle = data["muscle"]{
-            self._WRKMuscle = muscle as? Dictionary<Int, Bool>
+            self._WRKMuscle = muscle as? Dictionary<String, String>
+            //print("LUKE: \(muscle)")
+            let key = _WRKMuscle.keys.dropFirst().first
+            
+            if key == "0"{
+                _WRKColor = WRK_COLOR_BACK_2
+            }
+            if key == "1"{
+                _WRKColor = WRK_COLOR_BLUE_L
+            }
+            if key == "2"{
+                _WRKColor = WRK_COLOR_BLUE_D
+            }
+            if key == "3"{
+                _WRKColor = WRK_COLOR_PURPLE_D
+            }
+            if key == "4"{
+                _WRKColor = WRK_COLOR_PURPLE_L
+            }
+            if key == "5"{
+                _WRKColor = WRK_COLOR_RED
+            }
+            if key == "6"{
+                _WRKColor = WRK_COLOR_ORANGE
+            }
+            if key == "7"{
+                _WRKColor = WRK_COLOR_YELLOW
+            }
+            if key == "8"{
+                _WRKColor = WRK_COLOR_GREEN_L
+            }
+            if key == "9"{
+                _WRKColor = WRK_COLOR_GREEN_D
+            }
+            if key == "10"{
+                _WRKColor = WRK_COLOR_BROWN
+            }
+            if key == "11"{
+                _WRKColor = WRK_COLOR_BLUE_L
+            }
+            if key == "12"{
+                _WRKColor = WRK_COLOR_BLUE_D
+            }
+            if key == "13"{
+                _WRKColor = WRK_COLOR_PURPLE_D
+            }
+            if key == "14"{
+                _WRKColor = WRK_COLOR_PURPLE_L
+            }
+            if key == "15"{
+                _WRKColor = WRK_COLOR_RED
+            }
+            if key == "16"{
+                _WRKColor = WRK_COLOR_ORANGE
+            }
+
         }
         
     }
@@ -80,13 +135,13 @@ class WRKOut {
     var color: UIColor{
         return _WRKColor
     }
-    var muscle: Dictionary<Int, Bool>{
+    var muscle: Dictionary<String, String>{
         return _WRKMuscle
     }
     var equip: String{
         return _WRKEquipment
     }
-    var related: Dictionary<Int, Bool>{
+    var related: Dictionary<String, Bool>{
         return _WRKRelated
     }
     

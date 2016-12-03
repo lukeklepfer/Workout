@@ -13,7 +13,7 @@ class WRKMainDictVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     @IBOutlet weak var tableView: UITableView!
     
-    static var imgCache: NSCache<NSString, UIImage> = NSCache()
+    //static var imgCache: NSCache<NSString, UIImage> = NSCache()
     
     var wrkOutArray = [WRKOut]()
     var passedType: WRKMuscle!
@@ -41,8 +41,7 @@ class WRKMainDictVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             self.tableView.reloadData()
         })
     }
-
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WRKOutCell", for: indexPath) as? WRKOutCell{
